@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables file
+.env
+
+# Log files
+logs/
+
+# Build files
+build/
+dist/
+out/
+
+# OS or editor-generated files
+.DS_Store
+Thumbs.db
+.idea/
