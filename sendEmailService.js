@@ -35,10 +35,10 @@ app.post('/sendEmail', async (req, res) => {
   try {
     let info = await transporter.sendMail(mailOptions);
     console.log('Email sent: ' + info.response);
-    res.status(200).send('Email sent');
+    res.status(200).send('Anonymous message sent');
   } catch (error) {
-    console.error('Error sending email: ', error);
-    res.status(500).send('Error sending email');
+    console.error('Error sending message: ', error);
+    res.status(500).send('Error sending message');
   }
 });
 
