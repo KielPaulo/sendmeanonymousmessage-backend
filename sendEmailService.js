@@ -20,10 +20,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
 app.post('/sendEmail', async (req, res) => {
   const { emailContent } = req.body;
 
