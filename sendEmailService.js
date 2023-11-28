@@ -35,7 +35,14 @@ app.post('/sendEmail', async (req, res) => {
     from: process.env.EMAIL,
     to: process.env.EMAIL,
     subject: 'An anonymous message!',
-    text: emailContent
+
+    html: `
+    <div style="background: linear-gradient(to right,#2e9bfb,#8ecff6,#d7f1ff); padding: 60px; text-align: center;">
+      <div style="background: linear-gradient(61deg,#005bab,#81ddd9); border-radius: 20px; padding: 110px 20px 20px 20px; text-align: center; width: 350px; margin: 0 auto;">
+      <div style="background-color: #fff; border-radius: 50px; padding: 3px;"><h3 style="color: #777;">${emailContent}</h3></div>
+      </div>
+    </div>
+  `
   };
 
   try {
